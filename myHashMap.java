@@ -48,6 +48,21 @@ public class myHashMap {
 			
         System.out.println("Finding min value using Way 2");
         System.out.println("Min GPA is: "+minVal(studentsGPAs));
+
+
+        /* 
+        ///////////////////////////////// test method one ////////////////////////////////////
+         addStudentGPA(444004881, 4);
+         System.out.println(studentsGPAs.size());
+         System.out.println(studentsGPAs.get(444004881));
+         ///////////////////////////////// test method two ////////////////////////////////////
+         removeStudentGPA(444004881);
+         System.out.println(studentsGPAs.size());
+         //////////////////////////////// test method three ///////////////////////////////////
+         System.out.println( getAverageStudentGPA(studentsGPAs));
+         //////////////////////////////// test method four ///////////////////////////////////
+         System.out.println(getStudentIDWithHighestGPA(studentsGPAs));
+         */
                             
    }
   
@@ -75,7 +90,7 @@ public class myHashMap {
     for (double gpa : average.values()) {
         sum += gpa;
     }
-    return sum / gpas.size();
+    return sum / average.size();
 }
    // TODO: Define a static method called `getStudentIDWithHighestGPA` that returns the student ID with the highest GPA
    public static int getStudentIDWithHighestGPA(HashMap<Integer, Double> GPA) {
@@ -90,8 +105,6 @@ public class myHashMap {
     }
     return maxID; 
 }
-
-
 
 
 }
