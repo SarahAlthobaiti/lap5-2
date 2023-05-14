@@ -60,8 +60,23 @@ public class myHashMap {
   
   
    // TODO: Define a static method that adds an entry to studentsGPAs defined above
+
+   public static void addStudentGPA(int studentID, double gpa) {
+    studentsGPAs.put(studentID, gpa);
+}
    // TODO: Define a static method that remove an entry to studentsGPAs defined above using student ID
+
+   public static void removeStudentGPA(int studentID) {
+    studentsGPAs.remove(studentID);
+}
    // TODO: Define a static method called `getAverageStudentGPA` that returns the average of all GPA in studentsGPAs
+   public static double getAverageStudentGPA() {
+    double sum = 0.0;
+    for (double gpa : studentsGPAs.values()) {
+        sum += gpa;
+    }
+    return sum / studentsGPAs.size();
+}
    // TODO: Define a static method called `getStudentIDWithHighestGPA` that returns the student ID with the highest GPA
   
   
