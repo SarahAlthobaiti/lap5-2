@@ -70,15 +70,31 @@ public class myHashMap {
     studentsGPAs.remove(studentID);
 }
    // TODO: Define a static method called `getAverageStudentGPA` that returns the average of all GPA in studentsGPAs
-   public static double getAverageStudentGPA() {
+   public static double getAverageStudentGPA(HashMap<Integer, Double> average) {
     double sum = 0.0;
-    for (double gpa : studentsGPAs.values()) {
+    for (double gpa : average.values()) {
         sum += gpa;
     }
-    return sum / studentsGPAs.size();
+    return sum / gpas.size();
 }
    // TODO: Define a static method called `getStudentIDWithHighestGPA` that returns the student ID with the highest GPA
-  
-  
+   public static int getStudentIDWithHighestGPA(HashMap<Integer, Double> GPA) {
+    int maxID = 0;
+    double maxGPA = 0;
+    for (int studentID : GPA.keySet()) {
+        double gpa = GPA.get(studentID);
+        if (gpa > maxGPA) {
+            maxGPA = gpa;
+            maxID = studentID;
+        }
+    }
+    return maxID; 
 }
+
+
+
+
+}
+
+
         
