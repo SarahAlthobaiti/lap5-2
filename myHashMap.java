@@ -50,19 +50,20 @@ public class myHashMap {
         System.out.println("Min GPA is: "+minVal(studentsGPAs));
 
 
-        /* 
-        ///////////////////////////////// test method one ////////////////////////////////////
-         addStudentGPA(444004881, 4);
+        
+       /*  ///////////////////////////////// test method one ////////////////////////////////////
+         addStudentGPA(studentsGPAs,444004881, 4);
          System.out.println(studentsGPAs.size());
          System.out.println(studentsGPAs.get(444004881));
          ///////////////////////////////// test method two ////////////////////////////////////
-         removeStudentGPA(444004881);
+         removeStudentGPA(studentsGPAs,444004881);
          System.out.println(studentsGPAs.size());
          //////////////////////////////// test method three ///////////////////////////////////
          System.out.println( getAverageStudentGPA(studentsGPAs));
          //////////////////////////////// test method four ///////////////////////////////////
          System.out.println(getStudentIDWithHighestGPA(studentsGPAs));
          */
+         
                             
    }
   
@@ -76,13 +77,13 @@ public class myHashMap {
   
    // TODO: Define a static method that adds an entry to studentsGPAs defined above
 
-   public static void addStudentGPA(int studentID, double gpa) {
-    studentsGPAs.put(studentID, gpa);
+   public static void addStudentGPA(HashMap<Integer,Double> hm,int studentID, double gpa) {
+    hm.put(studentID, gpa);
 }
    // TODO: Define a static method that remove an entry to studentsGPAs defined above using student ID
 
-   public static void removeStudentGPA(int studentID) {
-    studentsGPAs.remove(studentID);
+   public static void removeStudentGPA(HashMap<Integer,Double> hm,int studentID) {
+    hm.remove(studentID);
 }
    // TODO: Define a static method called `getAverageStudentGPA` that returns the average of all GPA in studentsGPAs
    public static double getAverageStudentGPA(HashMap<Integer, Double> average) {
